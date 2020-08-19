@@ -1,0 +1,6 @@
+<svg id="icon-info" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <rect id="Rectangle" width="20" height="20" fill="none"/>
+  <path id="Path" d="M.615,0A.625.625,0,0,0,0,.634V5.009a.625.625,0,1,0,1.25,0V.634A.625.625,0,0,0,.615,0Z" transform="translate(9.375 8.741)" fill="#fff"/>
+  <circle id="Oval" cx="0.625" cy="0.625" r="0.625" transform="translate(9.375 5.625)" fill="#fff"/>
+  <path id="Shape" d="M8.75,17.5A8.75,8.75,0,1,1,17.5,8.75,8.76,8.76,0,0,1,8.75,17.5Zm0-16.25a7.5,7.5,0,1,0,7.5,7.5A7.508,7.508,0,0,0,8.75,1.25Z" transform="translate(1.25 1.25)" fill="#fff"/>
+</svg>
