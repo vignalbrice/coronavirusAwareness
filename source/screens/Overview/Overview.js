@@ -6,6 +6,19 @@ import Chart from '../../assets/images/chart.svg';
 import IconInfo from '../../assets/images/icon-info.svg';
 
 const Overview = () => {
+  const [diseases, setDiseases] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/all').then((res) => {
+      return res.json().then((data) => {
+        setDiseases(data);
+      });
+    });
+  }, []);
+
+  const numberFormat = (num) => {
+    return num?.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  };
   return (
     <View style={styles.view}>
       <View style={styles.headlineView}>
@@ -38,7 +51,7 @@ const Overview = () => {
             marginTop: 5,
             marginBottom: 8,
           }}>
-          737,204
+          {numberFormat(diseases?.cases)}
         </Text>
         <View style={{flexDirection: 'row'}}>
           <View style={{flexDirection: 'column', marginRight: 50}}>
@@ -57,7 +70,7 @@ const Overview = () => {
                 color: '#1A1A1A',
                 marginVertical: 10,
               }}>
-              35,020
+              {numberFormat(diseases.deaths)}
             </Text>
           </View>
           <View style={{flexDirection: 'column'}}>
@@ -76,7 +89,7 @@ const Overview = () => {
                 color: '#73D7B0',
                 marginVertical: 10,
               }}>
-              156,263
+              {numberFormat(diseases.recovered)}
             </Text>
           </View>
         </View>
